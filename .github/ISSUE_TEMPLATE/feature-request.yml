@@ -10,6 +10,21 @@ body:
       value: |
         Use this form to suggest new features or functionality for the school activities website.
         
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Analyze the requirements and acceptance criteria
+        2. Design the feature implementation
+        3. Add necessary backend (Python) and frontend (HTML/JavaScript) code
+        4. Test the feature thoroughly
+        5. Document how to use the new feature
+        
+        ### Tips for requesting features
+        - Describe the problem you're trying to solve, not just the solution
+        - Think through the complete user flow
+        - Consider edge cases and error scenarios
+        - Be clear about what "done" looks like with acceptance criteria
+        - Simple features are easier to implement than complex ones
+        
   - type: textarea
     id: feature-description
     attributes:

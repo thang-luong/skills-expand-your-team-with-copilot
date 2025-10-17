@@ -10,6 +10,19 @@ body:
       value: |
         Use this form to suggest improvements to the website's appearance or user experience.
         
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Analyze the current implementation
+        2. Make the suggested improvements to HTML, CSS, or JavaScript
+        3. Test the changes across different screen sizes
+        4. Ensure the improvement works for all users
+        
+        ### Tips for suggesting improvements
+        - Focus on user experience - how will this help students or teachers?
+        - Be specific about what should change
+        - Consider accessibility and mobile users
+        - Examples from other websites can be helpful
+        
   - type: dropdown
     id: area
     attributes:

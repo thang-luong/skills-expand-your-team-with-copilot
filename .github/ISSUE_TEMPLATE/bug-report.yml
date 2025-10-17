@@ -10,6 +10,19 @@ body:
       value: |
         Thank you for reporting a bug! Please fill out the form below to help us understand and fix the issue.
         
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Review the issue and identify the root cause
+        2. Fix the bug in the appropriate file (HTML, CSS, JavaScript, or Python)
+        3. Test the fix to ensure it resolves the problem
+        4. Verify no other functionality is broken
+        
+        ### Tips for reporting bugs
+        - Include specific error messages if you see any
+        - Describe exactly what you clicked or typed
+        - Note if this happens every time or only sometimes
+        - Screenshots are very helpful if you can include them
+        
   - type: textarea
     id: what-happened
     attributes:

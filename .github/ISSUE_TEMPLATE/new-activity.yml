@@ -10,6 +10,19 @@ body:
       value: |
         Thank you for requesting a new activity! Please fill out all the details below.
         
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Add the new activity to the database in `src/backend/database.py`
+        2. Ensure it appears in the activity list on the website
+        3. Verify it can be filtered by category and schedule
+        4. Test that students can register for it
+        
+        ### Tips for filling out this form
+        - Activity names should be unique and descriptive
+        - Categories help students find activities they're interested in
+        - Be specific with times (include AM/PM)
+        - Consider realistic capacity based on available resources
+        
   - type: input
     id: activity-name
     attributes:

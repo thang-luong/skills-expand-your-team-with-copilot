@@ -10,6 +10,19 @@ body:
       value: |
         Use this form to request removal of an activity that is no longer offered.
         
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Remove the activity from the database
+        2. Ensure it no longer appears on the website
+        3. Handle enrolled students according to your instructions
+        4. Clean up any related data
+        
+        ### Important considerations
+        - Removing an activity is permanent
+        - Consider modifying instead if the activity might return
+        - Enrolled students should be notified before removal
+        - Have a plan for students who were registered
+        
   - type: input
     id: activity-name
     attributes:

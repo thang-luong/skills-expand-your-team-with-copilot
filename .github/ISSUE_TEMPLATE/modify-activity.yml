@@ -10,6 +10,19 @@ body:
       value: |
         Use this form to request changes to an existing activity.
         
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Locate the activity in the database
+        2. Update the specified fields (schedule, description, capacity, name)
+        3. Ensure the changes display correctly on the website
+        4. Verify filters and search still work properly
+        
+        ### Tips for modifying activities
+        - You can change multiple things at once (schedule AND capacity, for example)
+        - Only fill in the fields for what you want to change
+        - Explain why changes are needed so we understand the context
+        - If changing schedule, provide the complete new schedule
+        
   - type: input
     id: activity-name
     attributes:
