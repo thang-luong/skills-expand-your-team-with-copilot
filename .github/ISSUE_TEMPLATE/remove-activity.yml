@@ -1,0 +1,64 @@
+name: Remove Activity
+description: Request to remove an activity from the website
+title: "[REMOVE ACTIVITY] "
+labels: ["enhancement", "activity-removal"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request removal of an activity that is no longer offered.
+        
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Remove the activity from the database
+        2. Ensure it no longer appears on the website
+        3. Handle enrolled students according to your instructions
+        4. Clean up any related data
+        
+        ### Important considerations
+        - Removing an activity is permanent
+        - Consider modifying instead if the activity might return
+        - Enrolled students should be notified before removal
+        - Have a plan for students who were registered
+        
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Which activity should be removed?
+      placeholder: For example, "Chess Club" or "Drama Club"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Removal
+      description: Why is this activity being removed?
+      placeholder: For example, "The activity coordinator has left the school" or "Not enough student interest"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: student-handling
+    attributes:
+      label: What should happen to currently enrolled students?
+      description: How should we handle students who are already registered?
+      options:
+        - Notify them that the activity is cancelled
+        - Transfer them to a similar activity
+        - Remove them without notification (activity hasn't started yet)
+        - Other (explain in additional details)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional Details
+      description: Any other information we should know?
+      placeholder: For example, "Replacement activity will be announced next week"
+    validations:
+      required: false

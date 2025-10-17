@@ -1,0 +1,107 @@
+name: Add New Activity
+description: Request to add a new extracurricular activity to the website
+title: "[NEW ACTIVITY] "
+labels: ["enhancement", "new-activity"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for requesting a new activity! Please fill out all the details below.
+        
+        ### What happens next
+        After you submit this form, the Copilot coding agent will:
+        1. Add the new activity to the database in `src/backend/database.py`
+        2. Ensure it appears in the activity list on the website
+        3. Verify it can be filtered by category and schedule
+        4. Test that students can register for it
+        
+        ### Tips for filling out this form
+        - Activity names should be unique and descriptive
+        - Categories help students find activities they're interested in
+        - Be specific with times (include AM/PM)
+        - Consider realistic capacity based on available resources
+        
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: What is the name of the new activity?
+      placeholder: For example, "Cooking Club" or "Yoga Class"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Activity Description
+      description: Write a brief description of what students will do in this activity.
+      placeholder: For example, "Learn basic cooking techniques and prepare healthy meals"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: Activity Category
+      description: Which category does this activity belong to?
+      options:
+        - Sports
+        - Arts
+        - Academic
+        - Community
+        - Technology
+        - Other
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: schedule-days
+    attributes:
+      label: Which days will this activity meet?
+      description: Select all days that apply
+      options:
+        - label: Monday
+        - label: Tuesday
+        - label: Wednesday
+        - label: Thursday
+        - label: Friday
+        - label: Saturday
+        - label: Sunday
+          
+  - type: input
+    id: start-time
+    attributes:
+      label: Start Time
+      description: What time does the activity start?
+      placeholder: For example, "3:15 PM" or "7:00 AM"
+    validations:
+      required: true
+      
+  - type: input
+    id: end-time
+    attributes:
+      label: End Time
+      description: What time does the activity end?
+      placeholder: For example, "5:00 PM" or "8:30 AM"
+    validations:
+      required: true
+      
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Number of Students
+      description: How many students can participate in this activity?
+      placeholder: For example, "15" or "20"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional Details
+      description: Any other information we should know about this activity?
+      placeholder: For example, "Students need to bring their own supplies" or "This activity is only for 10th grade and above"
+    validations:
+      required: false
