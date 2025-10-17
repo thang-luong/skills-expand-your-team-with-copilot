@@ -1,0 +1,88 @@
+name: New Feature Request
+description: Suggest a new feature or functionality for the website
+title: "[FEATURE] "
+labels: ["enhancement", "feature-request"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest new features or functionality for the school activities website.
+        
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: What new feature would you like to add to the website?
+      placeholder: For example, "Add ability to send email notifications to students when they register for an activity"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: problem-solved
+    attributes:
+      label: What problem does this solve?
+      description: Explain what challenge or need this feature addresses.
+      placeholder: For example, "Currently students don't receive confirmation when they register, leading to confusion"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: how-it-works
+    attributes:
+      label: How should it work?
+      description: Describe step-by-step how this feature would work from a user's perspective.
+      placeholder: |
+        1. Student registers for an activity
+        2. System automatically sends a confirmation email
+        3. Email includes activity details and next steps
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Who would use this feature?
+      options:
+        - Students
+        - Teachers
+        - Both students and teachers
+        - Administrators
+        - Parents/Guardians
+        - Everyone
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this feature?
+      options:
+        - Critical - Needed for basic functionality
+        - High - Would solve a major problem
+        - Medium - Would be very helpful
+        - Low - Nice to have
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this feature is working correctly?
+      description: What should happen when this feature is complete?
+      placeholder: |
+        - Email is sent within 5 seconds of registration
+        - Email includes all activity details
+        - Students receive the email at their registered address
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information, examples, or references?
+      placeholder: For example, "Other schools use a similar system" or "This is similar to the notification system on website X"
+    validations:
+      required: false

@@ -1,0 +1,75 @@
+name: UI/Design Improvement
+description: Suggest improvements to how the website looks or works
+title: "[UI IMPROVEMENT] "
+labels: ["enhancement", "ui-improvement"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest improvements to the website's appearance or user experience.
+        
+  - type: dropdown
+    id: area
+    attributes:
+      label: What part of the website should be improved?
+      options:
+        - Homepage/Activity List
+        - Filters and Search
+        - Login Page
+        - Registration Forms
+        - Colors and Styling
+        - Mobile View
+        - Overall Layout
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: Current Situation
+      description: Describe how things work or look right now.
+      placeholder: For example, "The activity cards are hard to read because the text is too small"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: Describe how you think it should be improved.
+      placeholder: For example, "Make the activity name text larger and bold so it's easier to read"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this improvement?
+      options:
+        - Critical - Makes the site difficult to use
+        - Important - Would significantly improve the experience
+        - Nice to have - Would be a helpful enhancement
+        - Low priority - Just a small polish
+    validations:
+      required: true
+      
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Why is this improvement needed?
+      description: Explain who would benefit and how.
+      placeholder: For example, "Students with vision impairments would have an easier time reading activity names"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional Details
+      description: Any other information or examples?
+      placeholder: You can describe similar features on other websites or attach screenshots
+    validations:
+      required: false

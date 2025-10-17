@@ -1,0 +1,87 @@
+name: Modify Existing Activity
+description: Request changes to an existing activity (schedule, capacity, description, etc.)
+title: "[MODIFY ACTIVITY] "
+labels: ["enhancement", "activity-modification"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request changes to an existing activity.
+        
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Which activity needs to be changed?
+      placeholder: For example, "Chess Club" or "Soccer Team"
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: change-type
+    attributes:
+      label: What needs to be changed?
+      description: Select all that apply
+      options:
+        - label: Schedule (days or times)
+        - label: Activity description
+        - label: Maximum number of students
+        - label: Activity name
+        - label: Other changes
+          
+  - type: textarea
+    id: schedule-changes
+    attributes:
+      label: Schedule Changes (if applicable)
+      description: Describe the new schedule for this activity.
+      placeholder: |
+        Current: Mondays and Fridays, 3:15 PM - 4:45 PM
+        New: Tuesdays and Thursdays, 3:30 PM - 5:00 PM
+    validations:
+      required: false
+      
+  - type: textarea
+    id: description-changes
+    attributes:
+      label: Description Changes (if applicable)
+      description: Provide the new description for this activity.
+      placeholder: Write the complete new description here
+    validations:
+      required: false
+      
+  - type: input
+    id: capacity-changes
+    attributes:
+      label: Maximum Students Changes (if applicable)
+      description: What should the new maximum number of students be?
+      placeholder: For example, "25"
+    validations:
+      required: false
+      
+  - type: input
+    id: name-changes
+    attributes:
+      label: Name Changes (if applicable)
+      description: What should the new name be?
+      placeholder: For example, "Advanced Chess Club"
+    validations:
+      required: false
+      
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Changes
+      description: Why are these changes needed?
+      placeholder: For example, "We need to move the schedule to avoid conflicts with other activities"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Additional Details
+      description: Any other information about these changes?
+    validations:
+      required: false

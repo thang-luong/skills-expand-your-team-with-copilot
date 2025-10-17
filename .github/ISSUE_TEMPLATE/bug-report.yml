@@ -1,0 +1,64 @@
+name: Bug Report
+description: Report a problem with the school activities website
+title: "[BUG] "
+labels: ["bug"]
+assignees:
+  - copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please fill out the form below to help us understand and fix the issue.
+        
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What went wrong?
+      description: Describe what happened when you encountered the bug. Be as specific as possible.
+      placeholder: For example, "When I try to register a student for Chess Club, I see an error message."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should have happened?
+      description: Describe what you expected to happen instead.
+      placeholder: For example, "The student should be added to the Chess Club participant list."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How can we recreate this problem?
+      description: List the steps you took when you encountered the bug.
+      placeholder: |
+        1. Log in as a teacher
+        2. Click on Chess Club
+        3. Enter student email
+        4. Click Register button
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: area
+    attributes:
+      label: What part of the website has the problem?
+      options:
+        - Login/Logout
+        - Student Registration
+        - Activity Display
+        - Filters (search, category, day, time)
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other details that might help us fix this bug? (Screenshots, error messages, etc.)
+      placeholder: Add any extra details here
+    validations:
+      required: false
